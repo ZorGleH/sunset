@@ -8,4 +8,4 @@ Démo : https://lces-sunset.netlify.app/
 
 - afficher un tooltip sur le jour survolé (date, heures de crépuscule, durée de la nuit…)
 - améliorer l'utilisation sur mobile
-- consommer les éphémérides à partir d'une API ou les calculer en fonction de la localisation
+- ~~consommer les éphémérides à partir d'une API ou les calculer en fonction de la localisation~~

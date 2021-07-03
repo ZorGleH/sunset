@@ -4,7 +4,9 @@ import {
   timeToSeconds,
   yearlyLightingTime
 } from "./time";
-import data from "../../data/ephemeris.json";
+import { getSunData } from "./ephemeris";
+
+const data = getSunData();
 
 describe("timeToSeconds", () => {
   test("random value", () => {
@@ -41,7 +43,7 @@ describe("yearlyLightingTime", () => {
         timeToSeconds("00:00:00"),
         timeToSeconds("24:00:00")
       )
-    ).toEqual(4104.24);
+    ).toEqual(4104.15);
   });
   test("partial lighting", () => {
     expect(
@@ -50,7 +52,7 @@ describe("yearlyLightingTime", () => {
         timeToSeconds("05:00:00"),
         timeToSeconds("23:00:00")
       )
-    ).toEqual(1940.35);
+    ).toEqual(1938.38);
   });
 });
 

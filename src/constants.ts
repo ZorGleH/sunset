@@ -19,6 +19,12 @@ export const CURRENT_LIGHTING_TIME = 4100;
 // Durée du jour en secondes
 export const DAY_DURATION = 24 * 60 * 60;
 
+// Latitude de la commune
+export const CITY_LATITUDE = 49.1273;
+
+// Longitude de la commune
+export const CITY_LONGITUDE = 2.53406;
+
 export enum Colors {
   Night = "midnightblue",
   Sunlight = "lightyellow",

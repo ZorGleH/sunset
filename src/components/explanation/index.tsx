@@ -6,7 +6,7 @@ import {
   COST_PER_WH,
   POPULATION,
   CYCLIST_HOURLY_PRODUCTION,
-  HOUSEHOLD_YEARLY_CONSUMPTION
+  HOUSEHOLD_YEARLY_CONSUMPTION,
 } from "../../constants";
 
 interface IProps {

@@ -3,7 +3,7 @@ import { Ephemeris } from "./components/ephemeris";
 import { RangeSlider } from "./components/range-slider";
 import { Explanation } from "./components/explanation";
 import { Legend } from "./components/legend";
-import data from "../data/ephemeris.json";
+import { getSunData } from "./utils/ephemeris";
 import { map, split, join, random } from "lodash";
 import { readableTime, yearlyLightingTime } from "./utils/time";
 import styled, { createGlobalStyle } from "styled-components";
@@ -38,6 +38,7 @@ const EphemerisContainer = styled.div`
 `;
 
 export default () => {
+  const data = getSunData();
   const dataWithSavings = map(data, day => {
     const curDay = new Date(day.date);
     if (curDay > SUMMER && curDay < WINTER) {
@@ -46,7 +47,7 @@ export default () => {
         sunrise: offsetTime(day.sunrise),
         sunset: offsetTime(day.sunset),
         civrise: offsetTime(day.civrise),
-        civset: offsetTime(day.civset)
+        civset: offsetTime(day.civset),
       };
     }
     return day;
